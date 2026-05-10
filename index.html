@@ -63,10 +63,18 @@
 
     <div id="modal" class="modal">
         <div class="modal-content">
-            <h2 id="modal-title"></h2>
-            <hr>
-            <p id="modal-desc"></p>
-            <button onclick="closeModal()" class="close-btn">CLOSE</button>
+            <h2 id="modal-title">Add New</h2>
+            <div class="input-group">
+                <div class="input-row">
+                    <input type="text" id="entry-name" placeholder="Title...">
+                    <input type="text" id="entry-cost" placeholder="Cost...">
+                </div>
+                <textarea id="entry-desc" placeholder="Description..."></textarea>
+            </div>
+            <div class="modal-actions">
+                <button class="add-btn" id="confirm-add">SAVE ENTRY</button>
+                <button class="close-btn" onclick="closeInputModal()">CANCEL</button>
+            </div>
         </div>
     </div>
 
