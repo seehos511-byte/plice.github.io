@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTRPG Character Sheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="bg-target">
+    <div class="sheet-boundary">
+        <div class="container">
+            <aside class="sidebar">
+                <div id="image-container">
+                    <img id="char-img" src="https://via.placeholder.com/400x500" alt="Character">
+                </div>
+                <input type="file" id="img-input" accept="image/*" style="display:none">
+                <label for="img-input" class="upload-btn">CHANGE PORTRAIT</label>
+            </aside>
+
+            <main class="main-content">
+                <section class="header-section">
+                    <input type="text" id="char-name" placeholder="CHARACTER NAME" class="name-input">
+                    <input type="text" id="char-level" placeholder="LVL 1" class="lvl-input">
+                </section>
+
+                <section class="stats-row">
+                    <div class="stat-box"><span>STR</span><input type="text" value="10"></div>
+                    <div class="stat-box"><span>DEX</span><input type="text" value="10"></div>
+                    <div class="stat-box"><span>CON</span><input type="text" value="10"></div>
+                    <div class="stat-box"><span>INT</span><input type="text" value="10"></div>
+                    <div class="stat-box"><span>WIS</span><input type="text" value="10"></div>
+                    <div class="stat-box"><span>CHA</span><input type="text" value="10"></div>
+                </section>
+
+                <section class="skills-row">
+                    <div class="row-header">
+                        <h3>PROFICIENCIES & LANGUAGES</h3>
+                        <button id="add-skill-btn" class="add-btn">+ ADD</button>
+                    </div>
+                    <div id="skills-list" class="tag-container"></div>
+                </section>
+
+                <section class="interaction-grid">
+                    <div class="col">
+                        <h3>EQUIPPED GEAR</h3>
+                        <button id="add-gear-btn" class="add-btn">+ ADD ITEM</button>
+                        <div id="gear-list" class="scroll-list"></div>
+                    </div>
+                    <div class="col">
+                        <h3>PASSIVES</h3>
+                        <button id="add-passive-btn" class="add-btn">+ ADD PASSIVE</button>
+                        <div id="passive-list" class="scroll-list"></div>
+                    </div>
+                    <div class="col">
+                        <h3>ABILITIES</h3>
+                        <button id="add-ability-btn" class="add-btn">+ ADD ABILITY</button>
+                        <div id="ability-list" class="scroll-list"></div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-title"></h2>
+            <hr>
+            <p id="modal-desc"></p>
+            <button onclick="closeModal()" class="close-btn">CLOSE</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
